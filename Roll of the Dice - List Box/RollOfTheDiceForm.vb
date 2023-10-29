@@ -8,6 +8,7 @@
 '[~]Import Roll of the dice methods (small enough will copy - paste)
 '[~]Convert Methods without console commands
 '[~]Convert Methods with console commands to update string (create display string) Next time use accumulate message function
+'[]Change DrawDiceRolls sub name to something more accurate(UpdateDisplayString) 
 '[]Convert Methods into the event handlers from console statement tree (ROll actions, clear actions, update display)
 
 Public Class RollOfTheDiceForm
@@ -109,41 +110,35 @@ Public Class RollOfTheDiceForm
         End If
     End Sub
 
+    ''' <summary>
+    ''' Roll dice 1,000 times and update display string
+    ''' </summary>
+    Sub RollDice()
+        For i = 1 To 1000
+            'Rolls two dice and adds them together
+            diceOne = DiceRoll()
+            diceTwo = DiceRoll()
+            diceTotal = AddTwoIntegers(diceOne, diceTwo)
+            'evaluates diceTotal and increments corresponding array element
+            EvaluateTotal(diceTotal)
+        Next
+        'updates display string with new Array elements and header counts total rolls
+        numberOfRolls += 1
+        DrawDiceRolls(diceRollTally)
+
+    End Sub
+
+    ''' <summary>
+    ''' Clears any previous total counts and number of rolls
+    ''' </summary>
+    Sub ClearRolls()
+        ReDim diceRollTally(10)
+        numberOfRolls = 0
+        DrawDiceRolls(diceRollTally)
+    End Sub
+
     'Event Handlers
     Private Sub ExitButton_Click(sender As Object, e As EventArgs) Handles ExitButton.Click
         Me.Close()
     End Sub
 End Class
-
-'Module RollOfTheDice
-
-'            Console.WriteLine("Press Enter to roll two dice 1,000 times and log their totals." & vbLf & "(Enter 'Q' to quit or 'C' to clear previous totals)" & vbLf)
-
-'            Select Case userInput
-'                Case = "Q", "q"
-'                    'Exits Program
-'                    Exit Do
-'                Case = "C", "c"
-'                    'Clears any previous total counts and number of rolls
-'                    ReDim diceRollTally(10)
-'                    numberOfRolls = 0
-'                    DrawDiceRolls(diceRollTally)
-'                Case Else
-'                    'Roll die 1,000 times
-'                    For i = 1 To 1000
-'                        'Rolls two dice and adds them together
-'                        diceOne = DiceRoll()
-'                        diceTwo = DiceRoll()
-'                        diceTotal = AddTwoIntegers(diceOne, diceTwo)
-
-'                        'evaluates diceTotal and increments corresponding array element
-'                        EvaluateTotal(diceTotal)
-'                    Next
-'                    'Draws Array elements and header counts total rolls
-'                    numberOfRolls += 1
-'                    DrawDiceRolls(diceRollTally)
-'            End Select
-'        Loop
-'    End Sub
-
-'End Module
