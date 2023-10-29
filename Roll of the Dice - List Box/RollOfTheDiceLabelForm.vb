@@ -1,8 +1,8 @@
 ﻿'Zachary Christensen
 'RCET 2265
 'Fall 2023
-'Roll of the Dice -List Box
-'https://github.com/Minidude140
+'Roll of the Dice -Label
+'https://github.com/Minidude140/Roll-of-the-Dice---Label.git
 
 'TODO:
 '[~]Import Roll of the dice methods (small enough will copy - paste)
