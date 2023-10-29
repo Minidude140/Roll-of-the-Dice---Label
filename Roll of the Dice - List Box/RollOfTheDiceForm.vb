@@ -8,8 +8,8 @@
 '[~]Import Roll of the dice methods (small enough will copy - paste)
 '[~]Convert Methods without console commands
 '[~]Convert Methods with console commands to update string (create display string) Next time use accumulate message function
-'[]Change DrawDiceRolls sub name to something more accurate(UpdateDisplayString) 
-'[]Convert Methods into the event handlers from console statement tree (ROll actions, clear actions, update display)
+'[~]Change DrawDiceRolls sub name to something more accurate(UpdateDisplayString) 
+'[~]Convert Methods into the event handlers from console statement tree (ROll actions, clear actions, update display)
 
 Public Class RollOfTheDiceForm
     Dim diceOne As Integer
@@ -79,18 +79,18 @@ Public Class RollOfTheDiceForm
     ''' Updates display string with given array data
     ''' </summary>
     ''' <param name="diceRollTally"></param>
-    Sub DrawDiceRolls(diceRollTally() As Integer)
+    Sub UpdateDisplayString(diceRollTally() As Integer)
         'create header with possible rolls
         Dim header = New String() {"2  |", "3  |", "4  |", "5  |", "6  |", "7  |", "8  |", "9  |", "10  |", "11  |", "12  |"}
         'Draw out top border and header
-        newDisplay = StrDup(78, "-") & "|"
+        newDisplay = StrDup(88, "-") & vbCrLf & "|"
         display = display & newDisplay
         For i = LBound(header) To UBound(header)
             newDisplay = header(i).PadLeft(7)
             display = display & newDisplay
         Next
         'Draw out diceRollTally() with borders
-        newDisplay = vbCrLf & vbCrLf & StrDup(78, "-") & "|"
+        newDisplay = vbCrLf & StrDup(88, "-") & vbCrLf & "|"
         display = display & newDisplay
         For i = LBound(diceRollTally) To UBound(diceRollTally)
             Dim currentTotal As String
@@ -98,7 +98,7 @@ Public Class RollOfTheDiceForm
             newDisplay = currentTotal.PadLeft(7)
             display = display & newDisplay
         Next
-        newDisplay = vbCrLf & vbCrLf & StrDup(78, "-") & vbCrLf
+        newDisplay = vbCrLf & StrDup(88, "-") & vbCrLf
         display = display & newDisplay
         'Reports the total number of rolls after array is drawn
         If numberOfRolls = 0 Then
@@ -124,7 +124,9 @@ Public Class RollOfTheDiceForm
         Next
         'updates display string with new Array elements and header counts total rolls
         numberOfRolls += 1
-        DrawDiceRolls(diceRollTally)
+        display = ""
+        newDisplay = ""
+        UpdateDisplayString(diceRollTally)
 
     End Sub
 
@@ -132,13 +134,38 @@ Public Class RollOfTheDiceForm
     ''' Clears any previous total counts and number of rolls
     ''' </summary>
     Sub ClearRolls()
+        display = ""
+        newDisplay = ""
         ReDim diceRollTally(10)
         numberOfRolls = 0
-        DrawDiceRolls(diceRollTally)
+    End Sub
+
+    ''' <summary>
+    ''' makes the text in the listbox the Display string
+    ''' </summary>
+    Sub UpdateLabel()
+        'DisplayLabel.Text = ""
+        DisplayLabel.Text = display
     End Sub
 
     'Event Handlers
+    Private Sub RollOfTheDiceForm_Load(sender As Object, e As EventArgs) Handles Me.Load
+        UpdateDisplayString(diceRollTally)
+        UpdateLabel()
+    End Sub
     Private Sub ExitButton_Click(sender As Object, e As EventArgs) Handles ExitButton.Click
         Me.Close()
     End Sub
+
+    Private Sub ClearButton_Click(sender As Object, e As EventArgs) Handles ClearButton.Click
+        ClearRolls()
+        UpdateDisplayString(diceRollTally)
+        UpdateLabel()
+    End Sub
+
+    Private Sub RollButton_Click(sender As Object, e As EventArgs) Handles RollButton.Click
+        RollDice()
+        UpdateLabel()
+    End Sub
+
 End Class
