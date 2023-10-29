@@ -6,10 +6,40 @@
 
 'TODO:
 '[~]Import Roll of the dice methods (small enough will copy - paste)
-'[]Convert methods into the event handlers from console statement tree
+'[~]Convert Methods without console commands
+'[]Convert Methods with console commands to update string (create display string)
+'[]Convert Methods into the event handlers from console statement tree (ROll actions, clear actions, update display)
 
 Public Class RollOfTheDiceForm
+    Dim diceOne As Integer
+    Dim diceTwo As Integer
+    Dim diceTotal As Integer
+    Dim diceRollTally() As Integer = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
+    Dim numberOfRolls As Integer = 0
+
     'Custom Methods
+    ''' <summary>
+    ''' Returns a Random Number 1-6
+    ''' </summary>
+    ''' <returns></returns>
+    Function DiceRoll() As Integer
+        Dim randomNumber As Integer
+        Randomize()
+        randomNumber = CInt((Rnd() * (6 - 1)) + 1)
+        Return randomNumber
+    End Function
+
+    ''' <summary>
+    ''' adds two numbers And returns the total
+    ''' </summary>
+    ''' <param name="numberOne"></param>
+    ''' <param name="numberTwo"></param>
+    ''' <returns></returns>
+    Function AddTwoIntegers(numberOne As Integer, numberTwo As Integer) As Integer
+        Dim summation As Integer
+        summation = numberOne + numberTwo
+        Return summation
+    End Function
 
     'Event Handlers
     Private Sub ExitButton_Click(sender As Object, e As EventArgs) Handles ExitButton.Click
@@ -19,20 +49,7 @@ End Class
 
 'Module RollOfTheDice
 
-'    Dim userInput As String
-'    Dim diceOne As Integer
-'    Dim diceTwo As Integer
-'    Dim diceTotal As Integer
-'    Dim diceRollTally() As Integer = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
-'    Dim numberOfRolls As Integer = 0
-
-
-'    Sub Main()
-'        Do
-'            'Prompt user for input
 '            Console.WriteLine("Press Enter to roll two dice 1,000 times and log their totals." & vbLf & "(Enter 'Q' to quit or 'C' to clear previous totals)" & vbLf)
-'            userInput = Console.ReadLine()
-'            Console.WriteLine()
 
 '            Select Case userInput
 '                Case = "Q", "q"
@@ -61,20 +78,7 @@ End Class
 '        Loop
 '    End Sub
 
-'    Function DiceRoll() As Integer
-'        'random number 1-6
-'        Dim randomNumber As Integer
-'        Randomize()
-'        randomNumber = CInt((Rnd() * (6 - 1)) + 1)
-'        Return randomNumber
-'    End Function
 
-'    Function AddTwoIntegers(numberOne As Integer, numberTwo As Integer) As Integer
-'        'adds two numbers and returns the total
-'        Dim summation As Integer
-'        summation = numberOne + numberTwo
-'        Return summation
-'    End Function
 
 '    Sub DrawDiceRolls(diceRollTally() As Integer)
 '        'create header with possible rolls
