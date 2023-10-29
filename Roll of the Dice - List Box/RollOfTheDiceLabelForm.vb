@@ -11,7 +11,7 @@
 '[~]Change DrawDiceRolls sub name to something more accurate(UpdateDisplayString) 
 '[~]Convert Methods into the event handlers from console statement tree (ROll actions, clear actions, update display)
 
-Public Class RollOfTheDiceForm
+Public Class RollOfTheDiceLabelForm
     Dim diceOne As Integer
     Dim diceTwo As Integer
     Dim diceTotal As Integer

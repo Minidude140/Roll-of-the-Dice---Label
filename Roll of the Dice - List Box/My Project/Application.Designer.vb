@@ -32,7 +32,7 @@ Namespace My
 
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()> _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.Roll_of_the_Dice___List_Box.RollOfTheDiceForm
+            Me.MainForm = Global.Roll_of_the_Dice___List_Box.RollOfTheDiceLabelForm
         End Sub
     End Class
 End Namespace
