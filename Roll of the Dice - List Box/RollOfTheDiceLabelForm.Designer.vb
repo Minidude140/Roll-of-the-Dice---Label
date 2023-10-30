@@ -33,30 +33,30 @@ Partial Class RollOfTheDiceLabelForm
         '
         'RollButton
         '
-        Me.RollButton.Location = New System.Drawing.Point(139, 272)
-        Me.RollButton.Margin = New System.Windows.Forms.Padding(2)
+        Me.RollButton.Location = New System.Drawing.Point(185, 335)
+        Me.RollButton.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.RollButton.Name = "RollButton"
-        Me.RollButton.Size = New System.Drawing.Size(124, 67)
+        Me.RollButton.Size = New System.Drawing.Size(165, 82)
         Me.RollButton.TabIndex = 0
         Me.RollButton.Text = "&Roll"
         Me.RollButton.UseVisualStyleBackColor = True
         '
         'ClearButton
         '
-        Me.ClearButton.Location = New System.Drawing.Point(267, 272)
-        Me.ClearButton.Margin = New System.Windows.Forms.Padding(2)
+        Me.ClearButton.Location = New System.Drawing.Point(356, 335)
+        Me.ClearButton.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ClearButton.Name = "ClearButton"
-        Me.ClearButton.Size = New System.Drawing.Size(124, 67)
+        Me.ClearButton.Size = New System.Drawing.Size(165, 82)
         Me.ClearButton.TabIndex = 1
         Me.ClearButton.Text = "&Clear"
         Me.ClearButton.UseVisualStyleBackColor = True
         '
         'ExitButton
         '
-        Me.ExitButton.Location = New System.Drawing.Point(395, 272)
-        Me.ExitButton.Margin = New System.Windows.Forms.Padding(2)
+        Me.ExitButton.Location = New System.Drawing.Point(527, 335)
+        Me.ExitButton.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ExitButton.Name = "ExitButton"
-        Me.ExitButton.Size = New System.Drawing.Size(124, 67)
+        Me.ExitButton.Size = New System.Drawing.Size(165, 82)
         Me.ExitButton.TabIndex = 2
         Me.ExitButton.Text = "E&xit"
         Me.ExitButton.UseVisualStyleBackColor = True
@@ -65,9 +65,10 @@ Partial Class RollOfTheDiceLabelForm
         '
         Me.DisplayLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.DisplayLabel.Font = New System.Drawing.Font("Modern No. 20", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DisplayLabel.Location = New System.Drawing.Point(101, 51)
+        Me.DisplayLabel.Location = New System.Drawing.Point(135, 63)
+        Me.DisplayLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.DisplayLabel.Name = "DisplayLabel"
-        Me.DisplayLabel.Size = New System.Drawing.Size(503, 159)
+        Me.DisplayLabel.Size = New System.Drawing.Size(670, 195)
         Me.DisplayLabel.TabIndex = 3
         Me.DisplayLabel.Text = "displaylabel"
         Me.DisplayLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -76,9 +77,10 @@ Partial Class RollOfTheDiceLabelForm
         '
         Me.PossibleRollsLabel.AutoSize = True
         Me.PossibleRollsLabel.Font = New System.Drawing.Font("Modern No. 20", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PossibleRollsLabel.Location = New System.Drawing.Point(6, 76)
+        Me.PossibleRollsLabel.Location = New System.Drawing.Point(8, 94)
+        Me.PossibleRollsLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.PossibleRollsLabel.Name = "PossibleRollsLabel"
-        Me.PossibleRollsLabel.Size = New System.Drawing.Size(82, 15)
+        Me.PossibleRollsLabel.Size = New System.Drawing.Size(106, 20)
         Me.PossibleRollsLabel.TabIndex = 4
         Me.PossibleRollsLabel.Text = "Possible Rolls"
         '
@@ -86,9 +88,10 @@ Partial Class RollOfTheDiceLabelForm
         '
         Me.RollTallyLabel.AutoSize = True
         Me.RollTallyLabel.Font = New System.Drawing.Font("Modern No. 20", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RollTallyLabel.Location = New System.Drawing.Point(26, 124)
+        Me.RollTallyLabel.Location = New System.Drawing.Point(35, 153)
+        Me.RollTallyLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.RollTallyLabel.Name = "RollTallyLabel"
-        Me.RollTallyLabel.Size = New System.Drawing.Size(62, 15)
+        Me.RollTallyLabel.Size = New System.Drawing.Size(80, 20)
         Me.RollTallyLabel.TabIndex = 5
         Me.RollTallyLabel.Text = "Roll Tally"
         '
@@ -96,17 +99,18 @@ Partial Class RollOfTheDiceLabelForm
         '
         Me.TitleLabel.AutoSize = True
         Me.TitleLabel.Font = New System.Drawing.Font("Modern No. 20", 14.25!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TitleLabel.Location = New System.Drawing.Point(205, 19)
+        Me.TitleLabel.Location = New System.Drawing.Point(273, 23)
+        Me.TitleLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.TitleLabel.Name = "TitleLabel"
-        Me.TitleLabel.Size = New System.Drawing.Size(290, 21)
+        Me.TitleLabel.Size = New System.Drawing.Size(371, 25)
         Me.TitleLabel.TabIndex = 6
         Me.TitleLabel.Text = "Roll Two Six Sided Die 1,000 Times"
         '
-        'RollOfTheDiceForm
+        'RollOfTheDiceLabelForm
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(640, 366)
+        Me.ClientSize = New System.Drawing.Size(853, 450)
         Me.Controls.Add(Me.TitleLabel)
         Me.Controls.Add(Me.RollTallyLabel)
         Me.Controls.Add(Me.PossibleRollsLabel)
@@ -114,8 +118,11 @@ Partial Class RollOfTheDiceLabelForm
         Me.Controls.Add(Me.ExitButton)
         Me.Controls.Add(Me.ClearButton)
         Me.Controls.Add(Me.RollButton)
-        Me.Margin = New System.Windows.Forms.Padding(2)
-        Me.Name = "RollOfTheDiceForm"
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Name = "RollOfTheDiceLabelForm"
+        Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Roll of the Dice"
         Me.ResumeLayout(False)
         Me.PerformLayout()
