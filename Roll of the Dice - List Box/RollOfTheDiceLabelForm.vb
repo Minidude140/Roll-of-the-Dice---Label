@@ -1,7 +1,7 @@
 ﻿'Zachary Christensen
 'RCET 2265
 'Fall 2023
-'Roll of the Dice -Label
+'Roll of the Dice - Label
 'https://github.com/Minidude140/Roll-of-the-Dice---Label.git
 
 'TODO:
