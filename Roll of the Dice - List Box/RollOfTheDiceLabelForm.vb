@@ -136,6 +136,7 @@ Public Class RollOfTheDiceLabelForm
     Sub ClearRolls()
         display = ""
         newDisplay = ""
+        ResultsListBox.Items.Clear()
         ReDim diceRollTally(10)
         numberOfRolls = 0
     End Sub
@@ -144,15 +145,12 @@ Public Class RollOfTheDiceLabelForm
     ''' makes the text in the listbox the Display string
     ''' </summary>
     Sub UpdateLabel()
-        'DisplayLabel.Text = ""
-        'DisplayLabel.Text = display
+        ResultsListBox.Items.Clear()
         Dim messageLines() As String
         messageLines = Split(display, vbCrLf)
         For i = 0 To 7
             ResultsListBox.Items.Add(messageLines(i))
         Next
-
-
     End Sub
 
     'Event Handlers
