@@ -145,7 +145,10 @@ Public Class RollOfTheDiceLabelForm
     ''' </summary>
     Sub UpdateLabel()
         'DisplayLabel.Text = ""
-        DisplayLabel.Text = display
+        'DisplayLabel.Text = display
+        Dim messageLines() As String
+        messageLines = Split(display, vbCrLf)
+
     End Sub
 
     'Event Handlers

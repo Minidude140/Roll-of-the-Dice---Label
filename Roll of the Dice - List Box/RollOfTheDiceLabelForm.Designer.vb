@@ -25,10 +25,10 @@ Partial Class RollOfTheDiceLabelForm
         Me.RollButton = New System.Windows.Forms.Button()
         Me.ClearButton = New System.Windows.Forms.Button()
         Me.ExitButton = New System.Windows.Forms.Button()
-        Me.DisplayLabel = New System.Windows.Forms.Label()
         Me.PossibleRollsLabel = New System.Windows.Forms.Label()
         Me.RollTallyLabel = New System.Windows.Forms.Label()
         Me.TitleLabel = New System.Windows.Forms.Label()
+        Me.ResultsListBox = New System.Windows.Forms.ListBox()
         Me.SuspendLayout()
         '
         'RollButton
@@ -60,18 +60,6 @@ Partial Class RollOfTheDiceLabelForm
         Me.ExitButton.TabIndex = 2
         Me.ExitButton.Text = "E&xit"
         Me.ExitButton.UseVisualStyleBackColor = True
-        '
-        'DisplayLabel
-        '
-        Me.DisplayLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.DisplayLabel.Font = New System.Drawing.Font("Modern No. 20", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DisplayLabel.Location = New System.Drawing.Point(135, 63)
-        Me.DisplayLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.DisplayLabel.Name = "DisplayLabel"
-        Me.DisplayLabel.Size = New System.Drawing.Size(670, 195)
-        Me.DisplayLabel.TabIndex = 3
-        Me.DisplayLabel.Text = "displaylabel"
-        Me.DisplayLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'PossibleRollsLabel
         '
@@ -106,15 +94,24 @@ Partial Class RollOfTheDiceLabelForm
         Me.TitleLabel.TabIndex = 6
         Me.TitleLabel.Text = "Roll Two Six Sided Die 1,000 Times"
         '
+        'ResultsListBox
+        '
+        Me.ResultsListBox.FormattingEnabled = True
+        Me.ResultsListBox.ItemHeight = 16
+        Me.ResultsListBox.Location = New System.Drawing.Point(210, 80)
+        Me.ResultsListBox.Name = "ResultsListBox"
+        Me.ResultsListBox.Size = New System.Drawing.Size(561, 212)
+        Me.ResultsListBox.TabIndex = 7
+        '
         'RollOfTheDiceLabelForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(853, 450)
+        Me.Controls.Add(Me.ResultsListBox)
         Me.Controls.Add(Me.TitleLabel)
         Me.Controls.Add(Me.RollTallyLabel)
         Me.Controls.Add(Me.PossibleRollsLabel)
-        Me.Controls.Add(Me.DisplayLabel)
         Me.Controls.Add(Me.ExitButton)
         Me.Controls.Add(Me.ClearButton)
         Me.Controls.Add(Me.RollButton)
@@ -132,8 +129,8 @@ Partial Class RollOfTheDiceLabelForm
     Friend WithEvents RollButton As Button
     Friend WithEvents ClearButton As Button
     Friend WithEvents ExitButton As Button
-    Friend WithEvents DisplayLabel As Label
     Friend WithEvents PossibleRollsLabel As Label
     Friend WithEvents RollTallyLabel As Label
     Friend WithEvents TitleLabel As Label
+    Friend WithEvents ResultsListBox As ListBox
 End Class
