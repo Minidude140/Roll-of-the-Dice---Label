@@ -65,7 +65,7 @@ Partial Class RollOfTheDiceLabelForm
         '
         Me.PossibleRollsLabel.AutoSize = True
         Me.PossibleRollsLabel.Font = New System.Drawing.Font("Modern No. 20", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PossibleRollsLabel.Location = New System.Drawing.Point(8, 94)
+        Me.PossibleRollsLabel.Location = New System.Drawing.Point(8, 105)
         Me.PossibleRollsLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.PossibleRollsLabel.Name = "PossibleRollsLabel"
         Me.PossibleRollsLabel.Size = New System.Drawing.Size(106, 20)
@@ -96,11 +96,12 @@ Partial Class RollOfTheDiceLabelForm
         '
         'ResultsListBox
         '
+        Me.ResultsListBox.Font = New System.Drawing.Font("Modern No. 20", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ResultsListBox.FormattingEnabled = True
-        Me.ResultsListBox.ItemHeight = 16
-        Me.ResultsListBox.Location = New System.Drawing.Point(210, 80)
+        Me.ResultsListBox.ItemHeight = 22
+        Me.ResultsListBox.Location = New System.Drawing.Point(121, 80)
         Me.ResultsListBox.Name = "ResultsListBox"
-        Me.ResultsListBox.Size = New System.Drawing.Size(561, 212)
+        Me.ResultsListBox.Size = New System.Drawing.Size(584, 202)
         Me.ResultsListBox.TabIndex = 7
         '
         'RollOfTheDiceLabelForm
