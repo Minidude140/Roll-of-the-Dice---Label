@@ -148,6 +148,10 @@ Public Class RollOfTheDiceLabelForm
         'DisplayLabel.Text = display
         Dim messageLines() As String
         messageLines = Split(display, vbCrLf)
+        For i = 0 To 7
+            ResultsListBox.Items.Add(messageLines(i))
+        Next
+
 
     End Sub
 
